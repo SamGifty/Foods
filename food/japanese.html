@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Japanese Cuisine - Taste the World</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet"href="italian.css">
+    <style>
+        /* Reuse styles from italian.css with color adjustments */
+        :root {
+            --primary: #f7931e;
+            --secondary: #006b38;
+            --light: #f8f9fa;
+            --dark: #212529;
+            --accent: #e63946;
+        }
+        
+        /* Japanese-specific hero */
+        .cuisine-hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1536304993881-ff6e9eefa2a6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');
+        }
+        
+        /* Umami indicator */
+        .umami-level {
+            display: flex;
+            align-items: center;
+            margin: 0.5rem 0;
+        }
+        
+        .umami-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: #ddd;
+            margin-right: 5px;
+        }
+        
+        .umami-dot.active {
+            background-color: #006b38;
+        }
+        
+        /* Japanese meal structure */
+        .meal-structure {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+        }
+        
+        .meal-component {
+            background: white;
+            border-radius: 10px;
+            padding: 1.5rem;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s;
+        }
+        
+        .meal-component:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .component-icon {
+            font-size: 2rem;
+            color: var(--accent);
+            margin-bottom: 1rem;
+        }
+        
+        /* Featured recipe adjustments */
+        .recipe-image {
+            background: url('https://images.unsplash.com/photo-1611270633750-4a2c1b0b2675?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80') center/cover;
+        }
+    </style>
+</head>
+<body>
+   <!-- Header -->
+   <header>
+    <div class="header-container">
+        <div class="logo">
+            <i class="fas fa-utensils"></i>
+            <span>Taste the World</span>
+        </div>
+        <button class="mobile-menu-btn" id="mobileMenuBtn">
+            <i class="fas fa-bars"></i>
+        </button>
+        <nav id="nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#cuisines">Cuisines</a></li>
+                <li><a href="index.html#recipes">Recipes</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+    <!-- Cuisine Hero -->
+    <section class="cuisine-hero">
+        <h1>Japanese Cuisine</h1>
+    </section>
+
+    <!-- Cuisine Content -->
+    <div class="cuisine-content">
+        <div class="cuisine-intro">
+            <div class="cuisine-intro-text">
+                <h2>The Art of Japanese Cooking</h2>
+                <p>Japanese cuisine, or washoku, is renowned for its emphasis on seasonality, quality of ingredients, and presentation. Recognized by UNESCO as an Intangible Cultural Heritage, Japanese food balances taste, texture, appearance, and nutrition.</p>
+                <p>From the delicate flavors of sushi to the hearty comfort of ramen, Japanese cuisine offers incredible variety. Staples include rice, seafood, pickled vegetables, and soy products. The concept of umami (savory taste) is central to Japanese cooking.</p>
+                <p>While some Japanese ingredients may seem exotic, many techniques and principles can be adapted to Ghanaian kitchens. The focus on fresh, seasonal ingredients aligns well with Ghanaian culinary values, and several Japanese staples are now available in international stores.</p>
+            </div>
+            <div class="cuisine-intro-image">
+                <img src="images/foood.jpg" alt="Sushi">
+            </div>
+        </div>
+
+        <div class="section-title">
+            <h2>Signature Japanese Dishes</h2>
+        </div>
+
+        <div class="signature-dishes">
+            <div class="dish-card">
+                <div class="dish-image">
+                    <img src="images/b121419a4f6e16be30b58364b1b5681c.jpg" alt="Sushi">
+                </div>
+                <div class="dish-info">
+                    <h3>Sushi</h3>
+                    <div class="umami-level">
+                        <span>Umami Level:</span>
+                        <div class="umami-dots">
+                            <div class="umami-dot active"></div>
+                            <div class="umami-dot active"></div>
+                            <div class="umami-dot active"></div>
+                        </div>
+                    </div>
+                    <p>Vinegared rice combined with various ingredients, usually seafood. Includes nigiri (hand-pressed), maki (rolled), and sashimi (sliced raw fish without rice).</p>
+                    <p><strong>Ghanaian Tip:</strong> Try making sushi with smoked fish or cooked shrimp as safe alternatives to raw fish. Use local rice varieties.</p>
+                </div>
+            </div>
+            <div class="dish-card">
+                <div class="dish-image">
+                    <img src="images/0e4eef93b51c60032a289db5b993df54.jpg" alt="Ramen">
+                </div>
+                <div class="dish-info">
+                    <h3>Ramen</h3>
+                    <div class="umami-level">
+                        <span>Umami Level:</span>
+                        <div class="umami-dots">
+                            <div class="umami-dot active"></div>
+                            <div class="umami-dot active"></div>
+                            <div class="umami-dot active"></div>
+                        </div>
+                    </div>
+                    <p>Wheat noodles in a flavorful broth, topped with sliced pork, nori seaweed, boiled egg, and vegetables. Regional varieties differ in broth and toppings.</p>
+                    <p><strong>Ghanaian Tip:</strong> Make broth with local chicken and season with soy sauce. Top with boiled eggs and local greens.</p>
+                </div>
+            </div>
+            <div class="dish-card">
+                <div class="dish-image">
+                    <img src="images/6330db595d0fa3b00e671cfa88bc8ee8.jpg" alt="Tempura">
+                </div>
+                <div class="dish-info">
+                    <h3>Tempura</h3>
+                    <div class="umami-level">
+                        <span>Umami Level:</span>
+                        <div class="umami-dots">
+                            <div class="umami-dot active"></div>
+                            <div class="umami-dot"></div>
+                            <div class="umami-dot"></div>
+                        </div>
+                    </div>
+                    <p>Lightly battered and deep-fried seafood and vegetables, served with a dipping sauce. The batter is kept cold for a crisp texture.</p>
+                    <p><strong>Ghanaian Tip:</strong> Try tempura with local vegetables like eggplant, sweet potato, or plantain for a Ghanaian twist.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-title">
+            <h2>Traditional Japanese Meal Structure</h2>
+        </div>
+
+        <div class="meal-structure">
+            <div class="meal-component">
+                <div class="component-icon">
+                    <i class="fas fa-bowl-rice"></i>
+                </div>
+                <h4>Rice (Gohan)</h4>
+                <p>The staple of every meal, usually steamed white rice. Sometimes replaced with noodles.</p>
+            </div>
+            <div class="meal-component">
+                <div class="component-icon">
+                    <i class="fas fa-fish"></i>
+                </div>
+                <h4>Main Dish (Shusai)</h4>
+                <p>Typically fish, meat, or tofu, prepared grilled, fried, or simmered.</p>
+            </div>
+            <div class="meal-component">
+                <div class="component-icon">
+                    <i class="fas fa-utensils"></i>
+                </div>
+                <h4>Side Dishes (Fukushō)</h4>
+                <p>Vegetables, pickles, or small protein dishes that complement the main.</p>
+            </div>
+            <div class="meal-component">
+                <div class="component-icon">
+                    <i class="fas fa-mug-hot"></i>
+                </div>
+                <h4>Soup (Shirumono)</h4>
+                <p>Often miso soup, but can be clear broth or other varieties.</p>
+            </div>
+        </div>
+
+        <div class="section-title">
+            <h2>Ghanaian Adaptations</h2>
+        </div>
+
+        <div class="adaptations">
+            <div class="adaptation-item">
+                <div class="adaptation-icon">
+                    <i class="fas fa-exchange-alt"></i>
+                </div>
+                <div class="adaptation-text">
+                    <h3>Ingredient Substitutions</h3>
+                    <p>Use local fish like tilapia for sushi (cooked or smoked versions). Substitute local greens for seaweed in soups. Local mushrooms can replace shiitake in many dishes.</p>
+                </div>
+            </div>
+            <div class="adaptation-item">
+                <div class="adaptation-icon">
+                    <i class="fas fa-utensils"></i>
+                </div>
+                <div class="adaptation-text">
+                    <h3>Technique Adaptations</h3>
+                    <p>Japanese cooking techniques like grilling (yakimono) and steaming (mushimono) are easily done in Ghanaian kitchens. Try grilling plantain yakitori-style.</p>
+                </div>
+            </div>
+            <div class="adaptation-item">
+                <div class="adaptation-icon">
+                    <i class="fas fa-shopping-basket"></i>
+                </div>
+                <div class="adaptation-text">
+                    <h3>Local Availability</h3>
+                    <p>Soy sauce, rice vinegar, and noodles are available in supermarkets. For specialty items like nori or wasabi, check international stores or use local alternatives.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-title">
+            <h2>Featured Recipe: Ghanaian-Japanese Fusion Sushi Rolls</h2>
+        </div>
+
+        <div class="featured-recipe">
+            <div class="recipe-header">
+                <div class="recipe-image"></div>
+                <div class="recipe-intro">
+                    <h3>Smoked Fish and Plantain Sushi Rolls</h3>
+                    <div class="recipe-meta">
+                        <span><i class="fas fa-clock"></i> 60 mins</span>
+                        <span><i class="fas fa-user"></i> Serves 4</span>
+                        <span><i class="fas fa-signal"></i> Medium</span>
+                        <div class="umami-level">
+                            <span>Umami:</span>
+                            <div class="umami-dots">
+                                <div class="umami-dot active"></div>
+                                <div class="umami-dot active"></div>
+                                <div class="umami-dot"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <p>These fusion maki rolls combine Ghanaian smoked fish and ripe plantain with traditional sushi rice and nori seaweed. They offer a perfect introduction to sushi-making with familiar local flavors.</p>
+                </div>
+            </div>
+            <div class="recipe-details">
+                <div class="ingredients">
+                    <h4>Ingredients</h4>
+                    <ul>
+                        <li>2 cups Japanese short-grain rice (or local jasmine rice)</li>
+                        <li>2 1/4 cups water</li>
+                        <li>1/4 cup rice vinegar</li>
+                        <li>2 tbsp sugar</li>
+                        <li>1 tsp salt</li>
+                        <li>4 sheets nori seaweed</li>
+                        <li>200g smoked fish, flaked (remove bones)</li>
+                        <li>1 ripe plantain, sliced lengthwise and grilled</li>
+                        <li>1 avocado, sliced (optional)</li>
+                        <li>1 cucumber, julienned</li>
+                        <li>2 tbsp sesame seeds, toasted</li>
+                        <li>Pickled ginger, wasabi, and soy sauce for serving</li>
+                    </ul>
+                </div>
+                <div class="instructions">
+                    <h4>Instructions</h4>
+                    <ol>
+                        <li><strong>Cook the rice:</strong> Rinse rice until water runs clear. Combine with water in a pot, bring to boil, then reduce heat to low, cover, and simmer for 15 minutes. Remove from heat and let stand 10 minutes.</li>
+                        <li><strong>Season the rice:</strong> In a small saucepan, heat vinegar, sugar, and salt until dissolved. Transfer rice to a wooden or glass bowl, drizzle with vinegar mixture, and fold gently with a rice paddle or spatula. Cool to room temperature.</li>
+                        <li><strong>Prepare fillings:</strong> Flake the smoked fish, grill the plantain slices until caramelized, and prepare other vegetables.</li>
+                        <li><strong>Assemble rolls:</strong> Place a nori sheet shiny side down on a bamboo mat. With wet hands, spread about 3/4 cup rice evenly over nori, leaving 1-inch border at top. Sprinkle with sesame seeds.</li>
+                        <li>Arrange fillings (fish, plantain, cucumber, avocado) horizontally about 1-inch from bottom edge.</li>
+                        <li>Using the mat, roll the sushi away from you, applying gentle pressure. Wet the top border to seal.</li>
+                        <li>Repeat with remaining ingredients. You should get 4 rolls.</li>
+                        <li><strong>Slice rolls:</strong> With a very sharp wet knife, cut each roll into 6-8 pieces.</li>
+                        <li>Serve with soy sauce, wasabi, and pickled ginger. For extra Ghanaian flavor, offer shito sauce on the side.</li>
+                    </ol>
+                    <p><strong>Tip:</strong> For easier handling, cover your bamboo mat with plastic wrap before rolling. If nori is unavailable, try making inside-out rolls with rice on the outside.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+     <!-- Footer -->
+     <footer>
+        <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="index.html#about">About</a>
+            <a href="index.html#cuisines">Cuisines</a>
+            <a href="index.html#recipes">Recipes</a>
+            <a href="index.html#contact">Contact</a>
+        </div>
+        <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2023 Taste the World. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const nav = document.getElementById('nav');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            nav.classList.toggle('active');
+            mobileMenuBtn.innerHTML = nav.classList.contains('active') ? 
+                '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+        });
+    </script>
+</body>
+</html>

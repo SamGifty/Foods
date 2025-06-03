@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indian Cuisine - Taste the World</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Reuse styles from italian.css with color adjustments */
+        :root {
+            --primary: #f7931e;
+            --secondary: #006b38;
+            --light: #f8f9fa;
+            --dark: #212529;
+            --accent: #e63946;
+        }
+        
+        /* Header and general styles same as italian.html */
+        
+        /* Indian-specific hero */
+        .cuisine-hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1480&q=80');
+        }
+        
+        /* Spice meter for dishes */
+        .spice-meter {
+            display: flex;
+            align-items: center;
+            margin: 0.5rem 0;
+        }
+        
+        .spice-level {
+            display: flex;
+        }
+        
+        .spice-pepper {
+            color: #ccc;
+            margin-right: 3px;
+        }
+        
+        .spice-pepper.active {
+            color: #e63946;
+        }
+        
+        /* Regional variations section */
+        .regions {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        
+        .region-card {
+            background: white;
+            border-radius: 10px;
+            padding: 1.5rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s;
+        }
+        
+        .region-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .region-card h4 {
+            color: var(--secondary);
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+        }
+        
+        /* Featured recipe adjustments */
+        .recipe-image {
+            background: url('https://images.unsplash.com/photo-1631515243349-e0cb75fb8d3a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1488&q=80') center/cover;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header (same as italian.html) -->
+
+    <!-- Cuisine Hero -->
+    <section class="cuisine-hero">
+        <h1>Indian Cuisine</h1>
+    </section>
+
+    <!-- Cuisine Content -->
+    <div class="cuisine-content">
+        <div class="cuisine-intro">
+            <div class="cuisine-intro-text">
+                <h2>A Symphony of Spices</h2>
+                <p>Indian cuisine is a vibrant tapestry of flavors, colors, and aromas that varies dramatically from region to region. Known for its sophisticated use of spices and herbs, Indian food offers an incredible diversity of vegetarian and non-vegetarian dishes.</p>
+                <p>From the creamy curries of the north to the coconut-based dishes of the south, from the seafood specialties of the coasts to the wheat-based breads of the plains, Indian cuisine is as diverse as its geography and cultures.</p>
+                <p>Many Indian spices like turmeric, cumin, and coriander are now widely available in Ghana, making it easier than ever to recreate authentic flavors at home. The cooking techniques are also adaptable to Ghanaian kitchens.</p>
+            </div>
+            <div class="cuisine-intro-image">
+                <img src="https://images.unsplash.com/photo-1601050690649-216c3b8b9da0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Indian Spices">
+            </div>
+        </div>
+
+        <div class="section-title">
+            <h2>Signature Indian Dishes</h2>
+        </div>
+
+        <div class="signature-dishes">
+            <div class="dish-card">
+                <div class="dish-image">
+                    <img src="https://images.unsplash.com/photo-1631515243349-e0cb75fb8d3a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1488&q=80" alt="Butter Chicken">
+                </div>
+                <div class="dish-info">
+                    <h3>Butter Chicken</h3>
+                    <div class="spice-meter">
+                        <span>Spice Level:</span>
+                        <div class="spice-level">
+                            <i class="fas fa-pepper-hot spice-pepper active"></i>
+                            <i class="fas fa-pepper-hot spice-pepper active"></i>
+                            <i class="fas fa-pepper-hot spice-pepper"></i>
+                        </div>
+                    </div>
+                    <p>This creamy tomato-based curry from Punjab features tender chicken pieces in a rich sauce made with butter, cream, and aromatic spices.</p>
+                    <p><strong>Ghanaian Tip:</strong> Use local chicken and substitute fresh cream with evaporated milk for a lighter version.</p>
+                </div>
+            </div>
+            <div class="dish-card">
+                <div class="dish-image">
+                    <img src="https://images.unsplash.com/photo-1589302168068-964664d93dc0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" alt="Biryani">
+                </div>
+                <div class="dish-info">
+                    <h3>Biryani</h3>
+                    <div class="spice-meter">
+                        <span>Spice Level:</span>
+                        <div class="spice-level">
+                            <i class="fas fa-pepper-hot spice-pepper active"></i>
+                            <i class="fas fa-pepper-hot spice-pepper active"></i>
+                            <i class="fas fa-pepper-hot spice-pepper active"></i>
+                        </div>
+                    </div>
+                    <p>A fragrant rice dish layered with marinated meat, caramelized onions, and aromatic spices, cooked together to create a flavorful one-pot meal.</p>
+                    <p><strong>Ghanaian Tip:</strong> Try making it with local jasmine rice and substitute traditional meats with goat or guinea fowl.</p>
+                </div>
+            </div>
+            <div class="dish-card">
+                <div class="dish-image">
+                    <img src="https://images.unsplash.com/photo-1601050690649-216c3b8b9da0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Dosa">
+                </div>
+                <div class="dish-info">
+                    <h3>Dosa</h3>
+                    <div class="spice-meter">
+                        <span>Spice Level:</span>
+                        <div class="spice-level">
+                            <i class="fas fa-pepper-hot spice-pepper active"></i>
+                            <i class="fas fa-pepper-hot spice-pepper"></i>
+                            <i class="fas fa-pepper-hot spice-pepper"></i>
+                        </div>
+                    </div>
+                    <p>A thin, crispy fermented crepe made from rice and lentils, typically served with coconut chutney and sambar (lentil stew).</p>
+                    <p><strong>Ghanaian Tip:</strong> Ferment the batter in Ghana's warm climate for authentic flavor, and serve with local pepper sauces.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-title">
+            <h2>Regional Variations</h2>
+        </div>
+
+        <div class="regions">
+            <div class="region-card">
+                <h4>North Indian</h4>
+                <p>Features creamy curries, tandoori dishes, and breads like naan and roti. Uses dairy products like ghee and paneer.</p>
+            </div>
+            <div class="region-card">
+                <h4>South Indian</h4>
+                <p>Known for rice-based dishes, dosas, idlis, and coconut-heavy curries. More vegetarian-focused with tangy flavors.</p>
+            </div>
+            <div class="region-card">
+                <h4>East Indian</h4>
+                <p>Features fish, mustard oil, and sweets. Known for dishes like macher jhol (fish curry) and rasgulla.</p>
+            </div>
+            <div class="region-card">
+                <h4>West Indian</h4>
+                <p>Includes Gujarati thalis, Goan seafood curries, and Maharashtrian street food like vada pav.</p>
+            </div>
+        </div>
+
+        <div class="section-title">
+            <h2>Ghanaian Adaptations</h2>
+        </div>
+
+        <div class="adaptations">
+            <div class="adaptation-item">
+                <div class="adaptation-icon">
+                    <i class="fas fa-mortar-pestle"></i>
+                </div>
+                <div class="adaptation-text">
+                    <h3>Spice Blends</h3>
+                    <p>Many Indian spice blends can be recreated with locally available spices. Garam masala can be made with Ghanaian cinnamon, cloves, and pepper. Curry powder blends well with local chili peppers.</p>
+                </div>
+            </div>
+            <div class="adaptation-item">
+                <div class="adaptation-icon">
+                    <i class="fas fa-leaf"></i>
+                </div>
+                <div class="adaptation-text">
+                    <h3>Herb Substitutes</h3>
+                    <p>While fresh cilantro is ideal, local herbs like scent leaves can provide a similar freshness to dishes. Curry leaves can be substituted with bay leaves or omitted if unavailable.</p>
+                </div>
+            </div>
+            <div class="adaptation-item">
+                <div class="adaptation-icon">
+                    <i class="fas fa-drumstick-bite"></i>
+                </div>
+                <div class="adaptation-text">
+                    <h3>Protein Options</h3>
+                    <p>Traditional Indian proteins like chicken, goat, and fish are readily available in Ghana. For vegetarian dishes, local beans and lentils work perfectly in dals and curries.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-title">
+            <h2>Featured Recipe: Ghanaian-Indian Fusion Chicken Curry</h2>
+        </div>
+
+        <div class="featured-recipe">
+            <div class="recipe-header">
+                <div class="recipe-image"></div>
+                <div class="recipe-intro">
+                    <h3>Fusion Chicken Curry with Local Flavors</h3>
+                    <div class="recipe-meta">
+                        <span><i class="fas fa-clock"></i> 45 mins</span>
+                        <span><i class="fas fa-user"></i> Serves 4</span>
+                        <span><i class="fas fa-signal"></i> Medium</span>
+                        <div class="spice-meter">
+                            <span>Spice:</span>
+                            <div class="spice-level">
+                                <i class="fas fa-pepper-hot spice-pepper active"></i>
+                                <i class="fas fa-pepper-hot spice-pepper active"></i>
+                                <i class="fas fa-pepper-hot spice-pepper"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p>This recipe blends traditional Indian curry techniques with Ghanaian ingredients for a delicious fusion dish. The result is a flavorful, aromatic curry that's not too spicy but packed with flavor.</p>
+                </div>
+            </div>
+            <div class="recipe-details">
+                <div class="ingredients">
+                    <h4>Ingredients</h4>
+                    <ul>
+                        <li>1 kg chicken, cut into pieces</li>
+                        <li>2 onions, finely chopped</li>
+                        <li>3 tomatoes, pureed</li>
+                        <li>4 cloves garlic, minced</li>
+                        <li>1 inch ginger, grated</li>
+                        <li>2 tbsp vegetable oil</li>
+                        <li>1 tsp cumin seeds</li>
+                        <li>1 tbsp curry powder (local or Indian)</li>
+                        <li>1 tsp turmeric powder</li>
+                        <li>1 tsp coriander powder</li>
+                        <li>1 tsp suya spice (optional)</li>
+                        <li>1 cup coconut milk</li>
+                        <li>Salt to taste</li>
+                        <li>Fresh cilantro or scent leaves for garnish</li>
+                    </ul>
+                </div>
+                <div class="instructions">
+                    <h4>Instructions</h4>
+                    <ol>
+                        <li>Heat oil in a large pot over medium heat. Add cumin seeds and let them sizzle for 30 seconds.</li>
+                        <li>Add chopped onions and sauté until golden brown, about 5-7 minutes.</li>
+                        <li>Add garlic and ginger, sauté for another minute until fragrant.</li>
+                        <li>Add chicken pieces and brown on all sides, about 5 minutes.</li>
+                        <li>Add all dry spices (curry powder, turmeric, coriander, suya spice) and stir well to coat the chicken.</li>
+                        <li>Add tomato puree and cook until the oil separates from the mixture, about 5-7 minutes.</li>
+                        <li>Pour in coconut milk and bring to a simmer. Cover and cook for 20-25 minutes until chicken is tender.</li>
+                        <li>Adjust salt and spice levels to taste. If the curry is too thick, add a little water.</li>
+                        <li>Garnish with fresh herbs and serve with rice or local fufu.</li>
+                    </ol>
+                    <p><strong>Tip:</strong> For extra flavor, marinate the chicken with half the spices and some lemon juice for 30 minutes before cooking.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer (same as italian.html) -->
+
+    <script>
+        // Same JavaScript as italian.html
+    </script>
+</body>
+</html>

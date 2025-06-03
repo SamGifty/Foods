@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mediterranean Cuisine - Taste the World</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet"href="italian.css">
+    <style>
+        /* Reuse styles from italian.css with color adjustments */
+        :root {
+            --primary: #f7931e;
+            --secondary: #006b38;
+            --light: #f8f9fa;
+            --dark: #212529;
+            --accent: #e63946;
+        }
+        
+        /* Mediterranean-specific hero */
+        .cuisine-hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1606787366850-de6330128bfc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');
+        }
+        
+        /* Health benefits section */
+        .benefits {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+        }
+        
+        .benefit-card {
+            background: white;
+            border-radius: 10px;
+            padding: 1.5rem;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s;
+        }
+        
+        .benefit-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .benefit-icon {
+            font-size: 2rem;
+            color: var(--secondary);
+            margin-bottom: 1rem;
+        }
+        
+        /* Featured recipe adjustments */
+        .recipe-image {
+            background: url('https://images.unsplash.com/photo-1603105037880-880cd4edfb0d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80') center/cover;
+        }
+    </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="header-container">
+        <div class="logo">
+            <i class="fas fa-utensils"></i>
+            <span>Taste the World</span>
+        </div>
+        <button class="mobile-menu-btn" id="mobileMenuBtn">
+            <i class="fas fa-bars"></i>
+        </button>
+        <nav id="nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#cuisines">Cuisines</a></li>
+                <li><a href="index.html#recipes">Recipes</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+    <!-- Cuisine Hero -->
+    <section class="cuisine-hero">
+        <h1>Mediterranean Cuisine</h1>
+    </section>
+
+    <!-- Cuisine Content -->
+    <div class="cuisine-content">
+        <div class="cuisine-intro">
+            <div class="cuisine-intro-text">
+                <h2>The Healthy Mediterranean Diet</h2>
+                <p>Mediterranean cuisine encompasses the traditional foods and cooking styles of countries bordering the Mediterranean Sea, including Greece, Italy, Spain, Morocco, and Lebanon. Renowned for its health benefits, this diet emphasizes fresh vegetables, fruits, whole grains, olive oil, and lean proteins.</p>
+                <p>What makes Mediterranean food special is its simplicity and focus on high-quality ingredients. Dishes are often prepared with just a few components that are allowed to shine. The cuisine is naturally suited to Ghanaian adaptations as many core ingredients are locally available or have good substitutes.</p>
+                <p>The Mediterranean diet has been associated with numerous health benefits including reduced risk of heart disease and longer life expectancy. Its emphasis on plant-based foods, healthy fats, and moderate portions makes it one of the world's healthiest eating patterns.</p>
+            </div>
+            <div class="cuisine-intro-image">
+                <img src="https://images.unsplash.com/photo-1603105037880-880cd4edfb0d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" alt="Mediterranean Food">
+            </div>
+        </div>
+
+        <div class="section-title">
+            <h2>Signature Mediterranean Dishes</h2>
+        </div>
+
+        <div class="signature-dishes">
+            <div class="dish-card">
+                <div class="dish-image">
+                    <img src="https://images.unsplash.com/photo-1603105037880-880cd4edfb0d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" alt="Greek Salad">
+                </div>
+                <div class="dish-info">
+                    <h3>Greek Salad</h3>
+                    <p>A refreshing combination of tomatoes, cucumber, red onion, olives, and feta cheese, dressed simply with olive oil and oregano.</p>
+                    <p><strong>Ghanaian Tip:</strong> Use local tomatoes and cucumbers, substitute local cheese for feta, and add garden eggs for extra flavor.</p>
+                </div>
+            </div>
+            <div class="dish-card">
+                <div class="dish-image">
+                    <img src="images/hummmus.jpg" alt="Hummus">
+                </div>
+                <div class="dish-info">
+                    <h3>Hummus</h3>
+                    <p>A creamy dip made from chickpeas, tahini (sesame paste), lemon juice, and garlic. A staple across the Middle East and Mediterranean.</p>
+                    <p><strong>Ghanaian Tip:</strong> Use local chickpeas or substitute with black-eyed peas for a different twist on this classic.</p>
+                </div>
+            </div>
+            <div class="dish-card">
+                <div class="dish-image">
+                    <img src="images/paella.jpg" alt="Paella">
+                </div>
+                <div class="dish-info">
+                    <h3>Paella</h3>
+                    <p>A Spanish rice dish cooked in a special pan with saffron, vegetables, and various combinations of seafood, chicken, and rabbit.</p>
+                    <p><strong>Ghanaian Tip:</strong> Make a Ghanaian version with local rice, smoked fish, and Ghanaian spices for a unique fusion dish.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-title">
+            <h2>Health Benefits</h2>
+        </div>
+
+        <div class="benefits">
+            <div class="benefit-card">
+                <div class="benefit-icon">
+                    <i class="fas fa-heart"></i>
+                </div>
+                <h4>Heart Health</h4>
+                <p>Rich in monounsaturated fats from olive oil and omega-3s from fish, which support cardiovascular health.</p>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-icon">
+                    <i class="fas fa-brain"></i>
+                </div>
+                <h4>Brain Function</h4>
+                <p>Healthy fats and antioxidants may help maintain cognitive function and reduce risk of dementia.</p>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-icon">
+                    <i class="fas fa-weight"></i>
+                </div>
+                <h4>Weight Management</h4>
+                <p>High fiber content and healthy fats promote satiety and help maintain healthy weight.</p>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-icon">
+                    <i class="fas fa-clock"></i>
+                </div>
+                <h4>Longevity</h4>
+                <p>Associated with longer life expectancy and reduced risk of chronic diseases.</p>
+            </div>
+        </div>
+
+        <div class="section-title">
+            <h2>Ghanaian Adaptations</h2>
+        </div>
+
+        <div class="adaptations">
+            <div class="adaptation-item">
+                <div class="adaptation-icon">
+                    <i class="fas fa-exchange-alt"></i>
+                </div>
+                <div class="adaptation-text">
+                    <h3>Oil Substitutions</h3>
+                    <p>While olive oil is ideal, local palm oil (used sparingly) or groundnut oil can work in some Mediterranean dishes. For raw applications like dressings, use lighter local oils.</p>
+                </div>
+            </div>
+            <div class="adaptation-item">
+                <div class="adaptation-icon">
+                    <i class="fas fa-seedling"></i>
+                </div>
+                <div class="adaptation-text">
+                    <h3>Vegetable Options</h3>
+                    <p>Many Mediterranean vegetables like tomatoes, onions, and eggplants are grown in Ghana. Local greens can substitute for spinach or kale in recipes.</p>
+                </div>
+            </div>
+            <div class="adaptation-item">
+                <div class="adaptation-icon">
+                    <i class="fas fa-fish"></i>
+                </div>
+                <div class="adaptation-text">
+                    <h3>Protein Sources</h3>
+                    <p>Local fish like tilapia and sardines are excellent substitutes for Mediterranean fish varieties. Chicken and goat can replace lamb in many dishes.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-title">
+            <h2>Featured Recipe: Ghanaian-Mediterranean Grilled Tilapia</h2>
+        </div>
+
+        <div class="featured-recipe">
+            <div class="recipe-header">
+                <div class="recipe-image"></div>
+                <div class="recipe-intro">
+                    <h3>Grilled Tilapia with Mediterranean Flavors</h3>
+                    <div class="recipe-meta">
+                        <span><i class="fas fa-clock"></i> 30 mins</span>
+                        <span><i class="fas fa-user"></i> Serves 2</span>
+                        <span><i class="fas fa-signal"></i> Easy</span>
+                    </div>
+                    <p>This recipe combines Ghana's beloved tilapia with classic Mediterranean flavors for a healthy, delicious meal. The fish is marinated in herbs and lemon, then grilled to perfection and served with a fresh vegetable salad.</p>
+                </div>
+            </div>
+            <div class="recipe-details">
+                <div class="ingredients">
+                    <h4>Ingredients</h4>
+                    <ul>
+                        <li>2 whole tilapia, cleaned and scaled</li>
+                        <li>2 lemons (1 juiced, 1 sliced)</li>
+                        <li>3 cloves garlic, minced</li>
+                        <li>2 tbsp olive oil (or local vegetable oil)</li>
+                        <li>1 tsp dried oregano</li>
+                        <li>1 tsp paprika</li>
+                        <li>Salt and pepper to taste</li>
+                        <li>1 tsp local pepper (optional)</li>
+                        <h5>For the Salad:</h5>
+                        <li>2 tomatoes, diced</li>
+                        <li>1 cucumber, diced</li>
+                        <li>1/2 red onion, thinly sliced</li>
+                        <li>Handful of olives (optional)</li>
+                        <li>100g feta or local cheese, cubed</li>
+                        <li>1 tbsp olive oil</li>
+                        <li>1 tsp dried mint or fresh scent leaves</li>
+                        <li>Salt to taste</li>
+                    </ul>
+                </div>
+                <div class="instructions">
+                    <h4>Instructions</h4>
+                    <ol>
+                        <li><strong>Prepare the fish:</strong> Make 3 diagonal slashes on each side of the tilapia to help the marinade penetrate.</li>
+                        <li><strong>Make the marinade:</strong> In a small bowl, whisk together lemon juice, garlic, olive oil, oregano, paprika, salt, pepper, and local pepper if using.</li>
+                        <li>Rub the marinade all over the fish, including inside the cavity. Place lemon slices inside the fish. Let marinate for at least 15 minutes (or up to 2 hours in the refrigerator).</li>
+                        <li><strong>Prepare the salad:</strong> Combine all salad ingredients in a bowl and toss gently. Set aside to let flavors meld.</li>
+                        <li><strong>Grill the fish:</strong> Heat a grill or grill pan over medium-high heat. Grill the fish for about 5-7 minutes per side, until the flesh flakes easily with a fork.</li>
+                        <li>Serve the grilled tilapia with the Mediterranean salad on the side. Drizzle with additional olive oil if desired.</li>
+                    </ol>
+                    <p><strong>Tip:</strong> For a complete meal, serve with boiled yam or plantain to add a Ghanaian starch element to this Mediterranean dish.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+   <!-- Footer -->
+   <footer>
+    <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="index.html#about">About</a>
+        <a href="index.html#cuisines">Cuisines</a>
+        <a href="index.html#recipes">Recipes</a>
+        <a href="index.html#contact">Contact</a>
+    </div>
+    <div class="social-links">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+    </div>
+    <div class="copyright">
+        <p>&copy; 2025 Taste the World. All Rights Reserved.</p>
+    </div>
+</footer>
+
+<script>
+    // Mobile Menu Toggle
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const nav = document.getElementById('nav');
+    
+    mobileMenuBtn.addEventListener('click', () => {
+        nav.classList.toggle('active');
+        mobileMenuBtn.innerHTML = nav.classList.contains('active') ? 
+            '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+    });
+</script>
+</body>
+</html>

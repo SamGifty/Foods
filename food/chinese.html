@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chinese Cuisine - Taste the World</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Reuse styles from italian.css with color adjustments */
+        :root {
+            --primary: #f7931e;
+            --secondary: #006b38;
+            --light: #f8f9fa;
+            --dark: #212529;
+            --accent: #e63946;
+        }
+        
+        /* Chinese-specific hero */
+        .cuisine-hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1551504734-5ee1c4a1479b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');
+        }
+        
+        /* Cooking methods section */
+        .methods {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+        }
+        
+        .method-card {
+            background: white;
+            border-radius: 10px;
+            padding: 1.5rem;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s;
+        }
+        
+        .method-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .method-icon {
+            font-size: 2rem;
+            color: var(--accent);
+            margin-bottom: 1rem;
+        }
+        
+        /* Featured recipe adjustments */
+        .recipe-image {
+            background: url('https://images.unsplash.com/photo-1563245372-f21724e3856d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80') center/cover;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header (same as italian.html) -->
+
+    <!-- Cuisine Hero -->
+    <section class="cuisine-hero">
+        <h1>Chinese Cuisine</h1>
+    </section>
+
+    <!-- Cuisine Content -->
+    <div class="cuisine-content">
+        <div class="cuisine-intro">
+            <div class="cuisine-intro-text">
+                <h2>The Art of Chinese Cooking</h2>
+                <p>Chinese cuisine is one of the world's oldest and most diverse culinary traditions, with a history spanning thousands of years. Characterized by its balanced flavors, varied textures, and emphasis on fresh ingredients, Chinese food is both delicious and nutritious.</p>
+                <p>The cuisine varies dramatically by region - from the spicy dishes of Sichuan to the subtle flavors of Cantonese cooking, from the wheat-based foods of the north to the rice-centric meals of the south. What unites them all is the Chinese philosophy of balancing yin and yang in food.</p>
+                <p>Many Chinese cooking techniques like stir-frying and steaming are ideal for Ghanaian kitchens, requiring minimal equipment while preserving nutrients and flavors. Key ingredients like soy sauce, ginger, and garlic are now widely available in Ghana.</p>
+            </div>
+            <div class="cuisine-intro-image">
+                <img src="https://images.unsplash.com/photo-1563245372-f21724e3856d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" alt="Chinese Dumplings">
+            </div>
+        </div>
+
+        <div class="section-title">
+            <h2>Signature Chinese Dishes</h2>
+        </div>
+
+        <div class="signature-dishes">
+            <div class="dish-card">
+                <div class="dish-image">
+                    <img src="https://images.unsplash.com/photo-1563245372-f21724e3856d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" alt="Dumplings">
+                </div>
+                <div class="dish-info">
+                    <h3>Dumplings (Jiaozi)</h3>
+                    <p>These stuffed parcels of dough can be boiled, steamed, or pan-fried, with fillings ranging from pork and cabbage to vegetarian options.</p>
+                    <p><strong>Ghanaian Tip:</strong> Try using local greens like kontomire in the filling, or make wrappers with local wheat flour.</p>
+                </div>
+            </div>
+            <div class="dish-card">
+                <div class="dish-image">
+                    <img src="https://images.unsplash.com/photo-1585032226651-759b368d7246?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1392&q=80" alt="Fried Rice">
+                </div>
+                <div class="dish-info">
+                    <h3>Fried Rice</h3>
+                    <p>A versatile dish made with cooked rice stir-fried with eggs, vegetables, and often meat or seafood, seasoned with soy sauce.</p>
+                    <p><strong>Ghanaian Tip:</strong> Use local jasmine rice and add Ghanaian ingredients like smoked fish or kelewele for a fusion twist.</p>
+                </div>
+            </div>
+            <div class="dish-card">
+                <div class="dish-image">
+                    <img src="https://images.unsplash.com/photo-1603532648955-ee310e0bb200?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" alt="Kung Pao Chicken">
+                </div>
+                <div class="dish-info">
+                    <h3>Kung Pao Chicken</h3>
+                    <p>A Sichuan classic featuring diced chicken, peanuts, vegetables, and chili peppers in a savory, slightly sweet and spicy sauce.</p>
+                    <p><strong>Ghanaian Tip:</strong> Substitute local peanuts and adjust chili levels to Ghanaian taste preferences.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-title">
+            <h2>Essential Chinese Cooking Methods</h2>
+        </div>
+
+        <div class="methods">
+            <div class="method-card">
+                <div class="method-icon">
+                    <i class="fas fa-fire"></i>
+                </div>
+                <h4>Stir-Frying</h4>
+                <p>Quick cooking over high heat with constant stirring, perfect for preserving texture and nutrients.</p>
+            </div>
+            <div class="method-card">
+                <div class="method-icon">
+                    <i class="fas fa-cloud"></i>
+                </div>
+                <h4>Steaming</h4>
+                <p>A healthy technique that cooks food with vapor heat, ideal for dumplings and fish.</p>
+            </div>
+            <div class="method-card">
+                <div class="method-icon">
+                    <i class="fas fa-temperature-high"></i>
+                </div>
+                <h4>Red Cooking</h4>
+                <p>Braising in soy sauce and spices gives dishes their characteristic red color and rich flavor.</p>
+            </div>
+            <div class="method-card">
+                <div class="method-icon">
+                    <i class="fas fa-utensils"></i>
+                </div>
+                <h4>Dim Sum</h4>
+                <p>The art of creating small, bite-sized portions served in steamer baskets or on small plates.</p>
+            </div>
+        </div>
+
+        <div class="section-title">
+            <h2>Ghanaian Adaptations</h2>
+        </div>
+
+        <div class="adaptations">
+            <div class="adaptation-item">
+                <div class="adaptation-icon">
+                    <i class="fas fa-exchange-alt"></i>
+                </div>
+                <div class="adaptation-text">
+                    <h3>Ingredient Substitutions</h3>
+                    <p>Chinese vegetables like bok choy can be replaced with local greens like kontomire or aleefu. Local mushrooms work well in stir-fries, and Ghanaian chili peppers can stand in for Sichuan peppercorns.</p>
+                </div>
+            </div>
+            <div class="adaptation-item">
+                <div class="adaptation-icon">
+                    <i class="fas fa-wok"></i>
+                </div>
+                <div class="adaptation-text">
+                    <h3>Equipment Solutions</h3>
+                    <p>While a wok is ideal, a deep frying pan can work for stir-frying. Bamboo steamers can be improvised with regular pots and plates. The key is high heat and quick cooking.</p>
+                </div>
+            </div>
+            <div class="adaptation-item">
+                <div class="adaptation-icon">
+                    <i class="fas fa-fish"></i>
+                </div>
+                <div class="adaptation-text">
+                    <h3>Protein Options</h3>
+                    <p>Local proteins like tilapia, chicken, and goat work beautifully in Chinese dishes. Smoked fish can add depth to fried rice, and local tofu is perfect for vegetarian options.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-title">
+            <h2>Featured Recipe: Ghanaian-Chinese Fusion Fried Rice</h2>
+        </div>
+
+        <div class="featured-recipe">
+            <div class="recipe-header">
+                <div class="recipe-image"></div>
+                <div class="recipe-intro">
+                    <h3>Fried Rice with Local Flavors</h3>
+                    <div class="recipe-meta">
+                        <span><i class="fas fa-clock"></i> 30 mins</span>
+                        <span><i class="fas fa-user"></i> Serves 4</span>
+                        <span><i class="fas fa-signal"></i> Easy</span>
+                    </div>
+                    <p>This fusion fried rice combines classic Chinese techniques with Ghanaian ingredients for a delicious, easy-to-make meal. It's a great way to use leftover rice and incorporate local flavors into an international dish.</p>
+                </div>
+            </div>
+            <div class="recipe-details">
+                <div class="ingredients">
+                    <h4>Ingredients</h4>
+                    <ul>
+                        <li>4 cups cooked jasmine rice (preferably day-old)</li>
+                        <li>2 eggs, beaten</li>
+                        <li>1 cup diced chicken or smoked fish</li>
+                        <li>1 onion, diced</li>
+                        <li>2 cloves garlic, minced</li>
+                        <li>1 carrot, diced</li>
+                        <li>1 cup chopped kontomire or spinach</li>
+                        <li>1/2 cup green beans, chopped</li>
+                        <li>2 tbsp vegetable oil</li>
+                        <li>2 tbsp soy sauce</li>
+                        <li>1 tsp ginger, grated</li>
+                        <li>1/2 tsp local pepper (adjust to taste)</li>
+                        <li>2 green onions, sliced</li>
+                        <li>Optional: 1/2 cup kelewele, diced</li>
+                    </ul>
+                </div>
+                <div class="instructions">
+                    <h4>Instructions</h4>
+                    <ol>
+                        <li>Heat 1 tbsp oil in a large pan or wok over high heat. Add beaten eggs and scramble until just set. Remove and set aside.</li>
+                        <li>Add remaining oil to the pan. Add chicken or fish and cook until done (if using raw chicken). Remove and set aside.</li>
+                        <li>In the same pan, add onion and garlic, stir-fry for 1 minute until fragrant.</li>
+                        <li>Add carrots and green beans, stir-fry for 2 minutes until slightly softened.</li>
+                        <li>Add greens and kelewele (if using), stir-fry for another minute.</li>
+                        <li>Add rice, breaking up any clumps. Stir-fry for 2-3 minutes until heated through.</li>
+                        <li>Add soy sauce, ginger, and pepper, stirring to distribute evenly.</li>
+                        <li>Return eggs and chicken/fish to the pan, mixing well.</li>
+                        <li>Taste and adjust seasoning, adding more soy sauce if needed.</li>
+                        <li>Garnish with green onions and serve hot.</li>
+                    </ol>
+                    <p><strong>Tip:</strong> For extra flavor, use leftover jollof rice as the base for a truly Ghanaian-Chinese fusion dish.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer (same as italian.html) -->
+
+    <script>
+        // Same JavaScript as italian.html
+    </script>
+</body>
+</html>

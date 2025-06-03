@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mexican Cuisine - Taste the World</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+   <link rel="stylesheet"href="italian.css">
+   <style>
+        /* Reuse styles from italian.css with color adjustments */
+        :root {
+            --primary: #f7931e;
+            --secondary: #006b38;
+            --light: #f8f9fa;
+            --dark: #212529;
+            --accent: #e63946;
+        }
+        
+        /* Mexican-specific hero */
+        .cuisine-hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1601050690597-df0568f70950?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');
+        }
+        
+        /* Heat level indicator */
+        .heat-level {
+            display: flex;
+            align-items: center;
+            margin: 0.5rem 0;
+        }
+        
+        .heat-pepper {
+            color: #ccc;
+            margin-right: 3px;
+        }
+        
+        .heat-pepper.active {
+            color: #e63946;
+        }
+        
+        /* Regional specialties */
+        .specialties {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        
+        .specialty-card {
+            background: white;
+            border-radius: 10px;
+            padding: 1.5rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s;
+        }
+        
+        .specialty-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .specialty-card h4 {
+            color: var(--secondary);
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+        }
+        
+        /* Featured recipe adjustments */
+        .recipe-image {
+            background: url('https://images.unsplash.com/photo-1565557623262-b51c2513a641?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1371&q=80') center/cover;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+  <header>
+    <div class="header-container">
+        <div class="logo">
+            <i class="fas fa-utensils"></i>
+            <span>Taste the World</span>
+        </div>
+        <button class="mobile-menu-btn" id="mobileMenuBtn">
+            <i class="fas fa-bars"></i>
+        </button>
+        <nav id="nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#cuisines">Cuisines</a></li>
+                <li><a href="index.html#recipes">Recipes</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+    <!-- Cuisine Hero -->
+    <section class="cuisine-hero">
+        <h1>Mexican Cuisine</h1>
+    </section>
+
+    <!-- Cuisine Content -->
+    <div class="cuisine-content">
+        <div class="cuisine-intro">
+            <div class="cuisine-intro-text">
+                <h2>Vibrant Flavors of Mexico</h2>
+                <p>Mexican cuisine is a colorful, vibrant celebration of flavors that has been recognized by UNESCO as an Intangible Cultural Heritage of Humanity. With its foundations in ancient Mesoamerican cooking and Spanish influences, Mexican food offers a perfect balance of spicy, sweet, savory, and tangy flavors.</p>
+                <p>From street food favorites like tacos and tamales to complex mole sauces, Mexican cuisine is incredibly diverse. Staples include corn, beans, chili peppers, tomatoes, and avocado, many of which have Ghanaian equivalents or are now imported.</p>
+                <p>What makes Mexican food particularly appealing is how many dishes can be adapted to Ghanaian tastes and ingredients while maintaining their authentic character. The emphasis on fresh ingredients and bold flavors aligns well with Ghanaian culinary traditions.</p>
+            </div>
+            <div class="cuisine-intro-image">
+                <img src="https://images.unsplash.com/photo-1547592180-85f173990554?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Mexican Ingredients">
+            </div>
+        </div>
+
+        <div class="section-title">
+            <h2>Signature Mexican Dishes</h2>
+        </div>
+
+        <div class="signature-dishes">
+            <div class="dish-card">
+                <div class="dish-image">
+                    <img src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1371&q=80" alt="Guacamole">
+                </div>
+                <div class="dish-info">
+                    <h3>Guacamole</h3>
+                    <div class="heat-level">
+                        <span>Heat Level:</span>
+                        <div class="heat-peppers">
+                            <i class="fas fa-pepper-hot heat-pepper"></i>
+                            <i class="fas fa-pepper-hot heat-pepper"></i>
+                            <i class="fas fa-pepper-hot heat-pepper"></i>
+                        </div>
+                    </div>
+                    <p>This creamy avocado dip is flavored with lime, cilantro, onion, and chili peppers. Authentic guacamole uses only a few fresh ingredients.</p>
+                    <p><strong>Ghanaian Tip:</strong> Use local avocados when in season and substitute local peppers for jalapeños. Scent leaves can replace cilantro.</p>
+                </div>
+            </div>
+            <div class="dish-card">
+                <div class="dish-image">
+                    <img src="images/toac.jpg" alt="Tacos">
+                </div>
+                <div class="dish-info">
+                    <h3>Tacos</h3>
+                    <div class="heat-level">
+                        <span>Heat Level:</span>
+                        <div class="heat-peppers">
+                            <i class="fas fa-pepper-hot heat-pepper active"></i>
+                            <i class="fas fa-pepper-hot heat-pepper"></i>
+                            <i class="fas fa-pepper-hot heat-pepper"></i>
+                        </div>
+                    </div>
+                    <p>Soft or crispy corn tortillas filled with various meats, vegetables, and salsas. Street-style tacos are simple with just meat, onions, and cilantro.</p>
+                    <p><strong>Ghanaian Tip:</strong> Make mini tacos with kelewele or grilled tilapia as fillings for a Ghanaian-Mexican fusion.</p>
+                </div>
+            </div>
+            <div class="dish-card">
+                <div class="dish-image">
+                    <img src="images/mole.jpg" alt="Mole">
+                </div>
+                <div class="dish-info">
+                    <h3>Mole</h3>
+                    <div class="heat-level">
+                        <span>Heat Level:</span>
+                        <div class="heat-peppers">
+                            <i class="fas fa-pepper-hot heat-pepper active"></i>
+                            <i class="fas fa-pepper-hot heat-pepper active"></i>
+                            <i class="fas fa-pepper-hot heat-pepper"></i>
+                        </div>
+                    </div>
+                    <p>A complex sauce made with chili peppers, spices, chocolate, and other ingredients. There are many regional varieties, with mole poblano being the most famous.</p>
+                    <p><strong>Ghanaian Tip:</strong> Simplify with local chili peppers and Ghanaian chocolate for an accessible version.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-title">
+            <h2>Regional Specialties</h2>
+        </div>
+
+        <div class="specialties">
+            <div class="specialty-card">
+                <h4>Northern Mexico</h4>
+                <p>Known for its beef dishes like carne asada and cabrito (roast kid goat), as well as wheat flour tortillas.</p>
+            </div>
+            <div class="specialty-card">
+                <h4>Central Mexico</h4>
+                <p>Home to complex moles, barbacoa (pit-roasted meat), and Mexico City's famous street food.</p>
+            </div>
+            <div class="specialty-card">
+                <h4>Southern Mexico</h4>
+                <p>Features more indigenous ingredients like hoja santa herb, tlayudas (large tortillas), and Oaxacan cheese.</p>
+            </div>
+            <div class="specialty-card">
+                <h4>Yucatán Peninsula</h4>
+                <p>Known for achiote seasoning, cochinita pibil (slow-roasted pork), and habanero peppers.</p>
+            </div>
+        </div>
+
+        <div class="section-title">
+            <h2>Ghanaian Adaptations</h2>
+        </div>
+
+        <div class="adaptations">
+            <div class="adaptation-item">
+                <div class="adaptation-icon">
+                    <i class="fas fa-exchange-alt"></i>
+                </div>
+                <div class="adaptation-text">
+                    <h3>Ingredient Substitutions</h3>
+                    <p>Corn tortillas can be made with local cornmeal. Plantains can stand in for some starchy elements. Local chili peppers work well in salsas, though they may be hotter than Mexican varieties.</p>
+                </div>
+            </div>
+            <div class="adaptation-item">
+                <div class="adaptation-icon">
+                    <i class="fas fa-utensils"></i>
+                </div>
+                <div class="adaptation-text">
+                    <h3>Fusion Flavors</h3>
+                    <p>Try jollof rice in burritos, kelewele in tacos, or smoked fish in quesadillas. The possibilities for Ghanaian-Mexican fusion are endless.</p>
+                </div>
+            </div>
+            <div class="adaptation-item">
+                <div class="adaptation-icon">
+                    <i class="fas fa-shopping-basket"></i>
+                </div>
+                <div class="adaptation-text">
+                    <h3>Local Availability</h3>
+                    <p>Many Mexican staples like beans, corn, tomatoes, and onions are readily available in Ghana. Specialty items like tortillas and Mexican cheeses can sometimes be found in international stores.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-title">
+            <h2>Featured Recipe: Ghanaian-Mexican Fusion Plantain Tacos</h2>
+        </div>
+
+        <div class="featured-recipe">
+            <div class="recipe-header">
+                <div class="recipe-image"></div>
+                <div class="recipe-intro">
+                    <h3>Sweet Plantain and Black Bean Tacos</h3>
+                    <div class="recipe-meta">
+                        <span><i class="fas fa-clock"></i> 35 mins</span>
+                        <span><i class="fas fa-user"></i> Serves 4</span>
+                        <span><i class="fas fa-signal"></i> Easy</span>
+                        <div class="heat-level">
+                            <span>Heat:</span>
+                            <div class="heat-peppers">
+                                <i class="fas fa-pepper-hot heat-pepper active"></i>
+                                <i class="fas fa-pepper-hot heat-pepper"></i>
+                                <i class="fas fa-pepper-hot heat-pepper"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p>These fusion tacos combine sweet fried plantains with spicy black beans for a perfect balance of flavors. Served with a quick Ghanaian-inspired salsa, they make a delicious vegetarian meal that's packed with protein and flavor.</p>
+                </div>
+            </div>
+            <div class="recipe-details">
+                <div class="ingredients">
+                    <h4>Ingredients</h4>
+                    <ul>
+                        <li>8 small corn tortillas (or make your own with masa harina or cornmeal)</li>
+                        <li>2 ripe plantains, peeled and sliced diagonally</li>
+                        <li>1 can black beans, drained and rinsed</li>
+                        <li>1 onion, diced</li>
+                        <li>2 cloves garlic, minced</li>
+                        <li>1 tsp cumin</li>
+                        <li>1 tsp chili powder (or local pepper powder)</li>
+                        <li>1 tbsp vegetable oil</li>
+                        <li>Salt to taste</li>
+                        <li>1 avocado, sliced (optional)</li>
+                        <li>1/4 cup crumbled feta or local cheese (as substitute for queso fresco)</li>
+                        <li>Fresh scent leaves or cilantro for garnish</li>
+                        <h5>For the Ghanaian Salsa:</h5>
+                        <li>2 tomatoes, diced</li>
+                        <li>1/2 onion, finely diced</li>
+                        <li>1 chili pepper, minced (adjust to taste)</li>
+                        <li>Juice of 1 lime</li>
+                        <li>Salt to taste</li>
+                    </ul>
+                </div>
+                <div class="instructions">
+                    <h4>Instructions</h4>
+                    <ol>
+                        <li><strong>Make the salsa:</strong> Combine all salsa ingredients in a bowl and let sit while you prepare the rest.</li>
+                        <li><strong>Cook the plantains:</strong> Heat a little oil in a pan over medium heat. Fry plantain slices until golden brown on both sides, about 2-3 minutes per side. Remove and set aside.</li>
+                        <li><strong>Prepare the beans:</strong> In the same pan, add a bit more oil if needed. Sauté onion until translucent, about 3 minutes. Add garlic and cook for 30 seconds until fragrant.</li>
+                        <li>Add black beans, cumin, chili powder, and a splash of water. Mash some of the beans with the back of a spoon while leaving others whole. Cook for 5 minutes until heated through. Season with salt.</li>
+                        <li><strong>Warm tortillas:</strong> Heat tortillas in a dry pan for about 30 seconds per side until pliable.</li>
+                        <li><strong>Assemble tacos:</strong> Spread some beans on each tortilla, top with fried plantains, avocado if using, salsa, and crumbled cheese. Garnish with fresh herbs.</li>
+                        <li>Serve immediately with lime wedges on the side.</li>
+                    </ol>
+                    <p><strong>Tip:</strong> For non-vegetarian version, add grilled chicken or smoked fish flakes to the tacos.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+ <!-- Footer -->
+ <footer>
+    <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="index.html#about">About</a>
+        <a href="index.html#cuisines">Cuisines</a>
+        <a href="index.html#recipes">Recipes</a>
+        <a href="index.html#contact">Contact</a>
+    </div>
+    <div class="social-links">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+    </div>
+    <div class="copyright">
+        <p>&copy; 2023 Taste the World. All Rights Reserved.</p>
+    </div>
+</footer>
+
+<script>
+    // Mobile Menu Toggle
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const nav = document.getElementById('nav');
+    
+    mobileMenuBtn.addEventListener('click', () => {
+        nav.classList.toggle('active');
+        mobileMenuBtn.innerHTML = nav.classList.contains('active') ? 
+            '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+    });
+</script>
+</body>
+</html>
