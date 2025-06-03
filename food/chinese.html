@@ -260,10 +260,36 @@
         </div>
     </div>
 
-    <!-- Footer (same as italian.html) -->
+     <!-- Footer -->
+    <footer>
+        <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="index.html#about">About</a>
+            <a href="index.html#cuisines">Cuisines</a>
+            <a href="index.html#recipes">Recipes</a>
+            <a href="index.html#contact">Contact</a>
+        </div>
+        <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2023 Taste the World. All Rights Reserved.</p>
+        </div>
+    </footer>
 
     <script>
-        // Same JavaScript as italian.html
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const nav = document.getElementById('nav');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            nav.classList.toggle('active');
+            mobileMenuBtn.innerHTML = nav.classList.contains('active') ? 
+                '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+        });
     </script>
 </body>
 </html>
